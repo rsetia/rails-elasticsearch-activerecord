@@ -9,15 +9,22 @@ Queries relational data using Elasticsearch and ActiveRecord.
 ## Local development
 
 1. Launch dockerized dependencies 
-    ```docker-compose up```
+
+```
+docker-compose up
+```
 
 2. Load data. The script will remove any data that breaks foreign key rules to
-   enforce consistency.
-    ```rails runner scripts/load_data.rb```
+   enforce consistency
+
+```
+rails runner scripts/load_data.rb
+```
 
 3. Query the data
 
-```$ rails runner scripts/search.rb -h
+```
+$ rails runner scripts/search.rb -h
 
 Usage: search.rb [options]
     -s, --scope SCOPE                Search scope (organizations, users, tickets)
@@ -27,7 +34,8 @@ Usage: search.rb [options]
 
 Example: 
 
-```$ rails runner scripts/search.rb -s organizations -f id -v 101
+```
+$ rails runner scripts/search.rb -s organizations -f id -v 101
 
 [{"id":101,"url":"http://initech.zendesk.com/api/v2/organizations/101.json","external_id":"9270ed79-35eb-4a38-a46f-35725197ea8d","name":"Enthaze","created_at":"2016-05-21T21:10:28.000Z","details":"MegaCorp","shared_tickets":false,"domain_names":["kage.com","ecratic.com","endipin.com","zentix.com"],"tags":["Fulton","West","Rodriguez","Farley"],"users":["Loraine
 Pittman","Francis Bailey","Haley Farmer","Herrera Norman"],"tickets":["A Problem
