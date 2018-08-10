@@ -16,12 +16,14 @@ Queries relational data using Elasticsearch and ActiveRecord.
     ```rails runner scripts/load_data.rb```
 
 3. Query the data
+
 ```$ rails runner scripts/search.rb -h
 
 Usage: search.rb [options]
     -s, --scope SCOPE                Search scope (organizations, users, tickets)
     -f, --field FIELD                Field to search within the scope
-    -v, --value VALUE                Value to search within the field```
+    -v, --value VALUE                Value to search within the field
+```
 
 Example: 
 
